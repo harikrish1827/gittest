@@ -16,13 +16,13 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class GoogleTest {
 
 	@Test
-public void validateBing() throws IOException {
-	WebDriverManager.chromedriver().setup();
-	WebDriver wd=new ChromeDriver();
-	wd.manage().window().maximize();
-	wd.get("https://www.google.com/");
-	wd.findElement(By.name("q")).sendKeys("chennai");
-	File src = ((TakesScreenshot)wd).getScreenshotAs(OutputType.FILE);
-	FileHandler.copy(src, new File("E:\\workspace\\J1_GitTest\\screenshot"));
-}
+	public void validateBing() throws IOException {
+		WebDriverManager.chromedriver().setup();
+		WebDriver wd = new ChromeDriver();
+		wd.manage().window().maximize();
+		wd.get("https://www.google.com/");
+		wd.findElement(By.name("q")).sendKeys("chennai");
+		File src = ((TakesScreenshot) wd).getScreenshotAs(OutputType.FILE);
+		FileHandler.copy(src, new File("E:\\workspace\\J1_GitTest\\screenshot\\google.jpeg"));
+	}
 }

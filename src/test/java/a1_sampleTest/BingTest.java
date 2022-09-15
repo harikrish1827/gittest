@@ -23,6 +23,6 @@ public void validateBing() throws IOException {
 	wd.get("https://www.bing.com/");
 	wd.findElement(By.name("q")).sendKeys("chennai");
 	File src = ((TakesScreenshot)wd).getScreenshotAs(OutputType.FILE);
-	FileHandler.copy(src, new File("E:\\workspace\\J1_GitTest\\screenshot"));
+	FileHandler.copy(src, new File("E:\\workspace\\J1_GitTest\\screenshot\\bing.jpeg"));
 }
 }
